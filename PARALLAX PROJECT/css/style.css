@@ -1,0 +1,151 @@
+/* GOOGLE FONT IMPORT */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Kablammo&family=Monomaniac+One&family=Pacifico&family=Roboto:wght@300&family=Satisfy&display=swap');
+
+/* UNIVERSAL RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* VARIABLES */
+:root{
+    /* COLORS */
+    --BODYCOLOR: black;
+    --BODYBACKGROUNDCOLOR: white;
+    --BODYLINEARGRADIENT: yellow;
+
+    /* FONTFAMILY */
+    --BODYFONTFAMILY: 'Kablammo', cursive;
+
+    /* FONTSIZE */
+    --BODYFONTSIZE: 1.5rem;
+
+    /* HEADER FONT FAMILY */
+    --HEADERFONTFAMILY: Arial, Helvetica, sans-serif;
+
+    /* PADDING */
+    --SMALLPADDING: 0.4rem;
+
+    /* BORDER */
+    --BORDER: 2px solid var(--BODYCOLOR);
+}
+
+/* GENERAL STYLES */
+html{
+    scroll-behavior: smooth;
+    font-family: var(--BODYFONTFAMILY);
+    font-size: var(--BODYFONTSIZE);
+}
+
+body{
+    min-height: 100vh;
+    max-width: 100%;
+    color: var(--BODYCOLOR);
+    background-color: var(--BODYBACKGROUNDCOLOR);
+    background-image: linear-gradient(var(--BODYLINEARGRADIENT), var(--BODYBACKGROUNDCOLOR));
+
+}
+
+h2{
+    color: var(--BODYBACKGROUNDCOLOR);
+    font-family: var(--HEADERFONTFAMILY);
+    font-size: var(--BODYFONTSIZE);
+    text-transform: uppercase;
+    font-weight: 900;
+    animation: bounceleft 5s ease-in-out 1ms 1 forwards;
+}
+
+@keyframes bounceleft{
+    0%{
+        transform: translateX(-2000px);
+        opacity: 0;
+    }
+    60%{
+        transform: translateX(20px);
+    }
+    80%{
+        transform: translateX(-5px);
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+p{
+    transform: translateY(-8rem);
+    color: var(--BODYBACKGROUNDCOLOR);
+    animation: bounceright 5s ease-in-out 1ms 1 forwards;
+}
+
+@keyframes bounceright{
+    0%{
+        transform: translateX(2000px);
+        opacity: 0;
+    }
+    60%{
+        transform: translateX(-20px);
+    }
+    80%{
+        transform: translateX(5px);
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+        transform: translateY(-8rem);
+    }
+}
+
+section{
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    max-width: 100%;
+    background-color: var(--BODYBACKGROUNDCOLOR);
+}
+
+/* MAIN STYLES */
+.part1{
+    background-image: url(/images/backgroundimage1.avif);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.part2{
+    background-image: url(/images/backgroundimage2.avif);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.part3{
+    background-image: url(/images/backgroundimage3.avif);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.part4{
+    background-image: url(/images/backgroundimage4.avif);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.part5{
+    background-image: url(/images/backgroundimage5.avif);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+
+
+
