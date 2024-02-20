@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+div{
+    background-color: black;
+    border: 2px solid red;
+    color: white;
+    margin-bottom: 4rem;
+    max-width: 10rem;
+    max-height: 100rem;
+    text-align: center;
+}
+
+.bounceleft{
+    transform: translate(0px);
+    animation-name: bounceleft;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1.5s;
+    animation-delay: 2ms;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+@keyframes bounceleft{
+    0%{transform: translateX(-2000px);
+        opacity: 0;
+    }
+
+    60%{transform: translateX(20px);
+    }
+
+    80%{transform: translateX(-5px);}
+
+    100%{transform: translateX(0px);
+        opacity: 1;}
+}
+
+.bounceright{
+    transform: translate(0px);
+    animation-name: bounceright;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1.5s;
+    animation-delay: 2ms;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+@keyframes bounceright{
+    0%{transform: translateX(2000px);
+        opacity: 0;
+    }
+
+    60%{transform: translateX(-20px);
+    }
+
+    80%{transform: translateX(5px);}
+
+    100%{transform: translateX(0px);
+        opacity: 1;}
+}
+
+.fadeup{
+    transform: translate(0px);
+    animation-name: fadeup;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1.5s;
+    animation-delay: 2ms;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+@keyframes fadeup{
+    0%{transform: translateY(20px);
+        opacity: 0;
+    }
+
+    100%{transform: translateY(0px);
+        opacity: 1;}
+}
+
+.fadedown{
+    transform: translate(0px);
+    animation-name: fadedown;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1.5s;
+    animation-delay: 2ms;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+@keyframes fadedown{
+    0%{transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    100%{transform: translateY(0px);
+        opacity: 1;}
+}

@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Monomaniac+One&family=Pacifico&family=Roboto:wght@300&display=swap');
+
+/* RESETS */
+/* universal reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Image reset */
+image{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* VARIABLES */
+:root{
+    /* COLORS */
+    --HEADERCOLOR: black;
+    --HEADERBGCOLOR: rgba(211, 211, 211, 0.623);
+    --BODYBGCOLOR: white;
+    --LINKCOLOR: var(--HEADERCOLOR);
+    --LINKHOVER: rgba(0, 0, 0, 0.479);
+    --LINKACTIVE: red;
+    --NAVBGCOLOR: var(--BODYBGCOLOR);
+    --NAVCOLOR: var(--HEADERCOLOR);
+    --MAINBGCOLOR: var(--HEADERBGCOLOR);
+    --MAINCOLOR: var(--HEADERCOLOR);
+
+
+    /* FONTFAMILY */
+    --FF: 'Pacifico', cursive;
+    --HEADERFF: Arial, Helvetica, sans-serif;
+
+    /* FONTSIZE */
+    --FS: 1.5rem;
+
+    /* MARGIN */
+    --MARGINTOPBOTTOM: 0.4rem;
+}
+
+
+
+/* GENERAL STYLES */
+html{
+    scroll-behavior: smooth;
+    font-family: var(--FF);
+    font-size: var(--FS);
+    background-color: var(--BODYBGCOLOR);
+    line-height: 1.5;
+}
+
+
+body{
+    min-height: 100vh;
+    width: 100%;
+}
+
+a:any-link{
+    color: var(--LINKCOLOR);
+}
+
+:is(a:hover, a:focus){
+    color: var(--LINKHOVER);
+}
+
+a:active{
+    color: var(--LINKACTIVE);
+}
+
+/* UTIILITY CLASSES */
+.nowrap{
+    white-space: nowrap;
+}
+
+header, nav, main, footer{
+    animation: fadeup 5s ease-in-out 1ms 1 forwards;
+}
+
+@keyframes fadeup{
+    0%{
+        transform: translateY(40px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+/* HEADERSTYLES */
+header{
+    background-color: var(--HEADERBGCOLOR);
+    color: var(--HEADERCOLOR);
+    text-align: center;
+    margin-bottom: var(--MARGINTOPBOTTOM);
+}
+
+h1{
+    font-family: var(--HEADERFF);
+    font-weight: 900;
+    text-transform: capitalize;
+
+}
+
+header p{
+    font-size: var(--FS);
+    color: rgba(0, 0, 0, 0.822);
+}
+
+/* NAV STYLES */
+nav{
+    background-color: var(--NAVBGCOLOR);
+    color: var(--NAVCOLOR);
+    margin: var(--MARGINTOPBOTTOM);
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+/* MAIN STYLES */
+main{
+    background-color: var(--MAINBGCOLOR);
+    color: var(--MAINCOLOR);
+}
+
+.history{
+    display: grid;
+    place-items: center;
+}
+
+.history h2{
+    margin-bottom: var(--MARGINTOPBOTTOM);
+}
+
+.history ul{
+    list-style-position: inside;
+    list-style-type: circle;
+}
+
+footer{
+    background-color: var(--HEADERBGCOLOR);
+    color: var(--HEADERCOLOR);
+    margin-bottom: var(--MARGINTOPBOTTOM);
+}
+
+.link{
+    text-align: center;
+}
+
+/* MEDIA QUERIES */
+/* LARGE DEVICES: LAPTOPS */
+
+@media screen and (min-width: 865px){
+    body{
+        background-color: firebrick;
+    }
+    figure{
+        display: grid;
+        place-items: center;
+    }
+    .bounceright{
+        animation: bounceright 5s ease-in-out 1ms 1 forwards;
+    }
+    
+    @keyframes bounceright{
+        0%{
+            transform: translateX(2000px);
+            opacity: 0;
+        }
+        60%{
+            transform: translateX(-20px);
+        }
+        80%{
+            transform: translateX(5px);
+        }
+        100%{
+            transform: translateX(0px);
+            opacity: 1;
+        }
+    }
+    
+    .bounceleft{
+        animation: bounceleft 5s ease-in-out 1ms 1 forwards;
+    }
+    @keyframes bounceleft{
+        0%{
+            transform: translateX(-2000px);
+            opacity: 0;
+        }
+        60%{
+            transform: translateX(20px);
+        }
+        80%{
+            transform: translateX(-5px);
+        }
+        100%{
+            transform: translateX(0px);
+            opacity: 1;
+        }
+    }
+    .moveup{
+        animation: moveup 5s ease-in-out 1ms 1 forwards;
+    }
+
+    @keyframes moveup{
+        0%{
+            transform: translateY(40px);
+        }
+
+        100%{
+            transform: translateY(0px);
+        }
+    }
+}
+
+
+
+/* LARGER DEVICES: DESKTOP AND LARGGE SCREENS */
+
+@media screen and (min-width: 1200px){
+    body{
+        background-color: yellow;
+    }
+}
